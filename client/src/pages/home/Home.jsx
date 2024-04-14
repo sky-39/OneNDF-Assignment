@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen justify-center items-center">
       <Navbar />
-      <div className="mt-12 text-3xl">Welcome {authUser.fullName}! Click on Apply for Loan for redeem your referral!</div>
+      <div className="mt-12 text-3xl mb-80">Welcome {authUser.fullName}! Click on Apply for Loan for redeem your referral!</div>
       <Footer />
     </div>
   );

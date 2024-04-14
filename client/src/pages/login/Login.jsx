@@ -15,41 +15,47 @@ const Login = () => {
 
   return (
     <div className="flex flex-row h-screen w-screen justify-stretch">
-      <div className="flex flex-col w-2/5 bg-zinc-800 pl-6 pr-2 font-bold">
-        <div className="flex flex-row items-center text-center">
-          <p
-            style={{
-              fontFamily: "Dancing Script",
-              fontWeight: "400",
-            }}
-            className="text-orange-500 mt-14 text-4xl"
-          >
+      <div className="flex flex-col w-2/5 bg-zinc-800 p-8 font-bold">
+        <div>
+          <img src="ndflogo.png" className="w-30 h-30 my-6" />
+        </div>
+        <div className="text-3xl text-white font-light my-6">
+          Unlocking access to debt capital for India{"'"}s SMEs |{" "}
+          <span className="text-orange-500 underline underline-offset-8">
             OneNDF
-          </p>
-          <img src="ndflogo.png" className="w-12 h-12 mt-14" />
+          </span>
         </div>
-        <p className="text-2xl w-96 text-blue-500 mt-8">
-          Unlocking access to debt capital for India{"'"}s SMEs
-        </p>
-        <div className="text-blue-400 mt-12">
+        <div className="text-white text-md font-light leading-9 my-8">
           Meet your debt capital needs with India{"’"}s fast-growing SME
-          business loan marketplace. We aim to nurture SMEs to make informed
-          decisions while creating an eco-system of cheaper & smarter debt
-          and/or non-traditional ways of Debt Financing. We work with
-          Non-Fundable Small Businesses to provide them access to credit via
-          Non-Traditional Lending and offer recommendations for becoming
-          future-ready for organized credit.
-          <div className="mt-12 border w-1/2 p-4 rounded-lg">
-            Create an account to get started
-          </div>
+          business{" "}
+          <span className="text-orange-500 underline underline-offset-8">
+            loan marketplace
+          </span>
+          . We aim to nurture SMEs to make informed decisions while creating an
+          eco-system of cheaper & smarter debt and/or non-traditional ways of{" "}
+          <span className="text-orange-500 underline underline-offset-8">
+            Debt Financing
+          </span>
+          . We work with Non-Fundable Small Businesses to provide them access to
+          credit via Non-Traditional Lending and offer recommendations for
+          becoming{" "}
+          <span className="text-orange-500 underline underline-offset-8">
+            future-ready
+          </span>{" "}
+          for organized credit.
         </div>
+        <Link to="/signup">
+          <div className="h-20 bg-white rounded flex justify-center items-center my-8 cursor-pointer hover:shadow-2xl">
+            Get Started
+          </div>
+        </Link>
       </div>
       <div className="h-100 w-3/5 mt-28">
         <p className="absolute right-10 top-5 text-black font-medium">
           New to OneNDF?{" "}
           <Link
             to="/signup"
-            className="text-blue-600 dark:text-blue-500 hover:underline"
+            className="text-blue-600 dark:text-zinc-800 hover:underline"
           >
             Sign Up
           </Link>
@@ -83,7 +89,7 @@ const Login = () => {
             </div>
             <div className="my-10 ml-5">
               <button
-                className={`w-48 h-10 bg-blue-500 rounded-lg text-white shadow-sm hover:bg-black disabled:opacity-45 disabled:cursor-not-allowed`}
+                className={`w-48 h-10 bg-zinc-800 rounded-lg text-white shadow-sm hover:bg-orange-500 disabled:opacity-45 disabled:cursor-not-allowed`}
                 disabled={loading}
               >
                 {loading ? (

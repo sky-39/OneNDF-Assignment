@@ -20,27 +20,32 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex flex-row w-screen p-3 border-b justify-between">
-      <div className="w-1/12 ml-4">
+    <div className="flex flex-row w-screen p-3 border-b justify-between bg-zinc-800">
+      <div className="w-1/12 ml-20">
       <Link to="/">
         <img src="ndflogo.png"/>
         </Link>
       </div>
-      <div className="flex flex-row items-center w-5/12 justify-evenly mr-32 text-sm font-semibold text-gray-500">
+      <div className="flex flex-row items-center w-7/12 justify-evenly mr-32 text-md text-white">
         <div>
-          <p className="hover:underline cursor-pointer">Inspiration</p>
+        <Link to="/">
+          <p className="hover:underline cursor-pointer underline-offset-8 underline decoration-orange-500">Home</p>
+          </Link>
         </div>
         <div>
-          <p className="hover:underline cursor-pointer">Find Work</p>
+          <p className="hover:underline hover:underline-offset-8 cursor-pointer">Products</p>
         </div>
         <div>
-          <p className="hover:underline cursor-pointer">Learn Design</p>
+          <p className="hover:underline hover:underline-offset-8 cursor-pointer">Loan Marketplace</p>
         </div>
         <div>
-          <p className="hover:underline cursor-pointer">Go Pro</p>
+          <p className="hover:underline hover:underline-offset-8 cursor-pointer">EMI Calculator</p>
         </div>
         <div>
-          <Link to="/applyforloan" className="hover:underline cursor-pointer">Apply for Loan</Link>
+          <p className="hover:underline hover:underline-offset-8 cursor-pointer">About</p>
+        </div>
+        <div>
+          <Link to="/applyforloan" className="hover:underline hover:underline-offset-8 cursor-pointer">Apply for Loan</Link>
         </div>
       </div>
       <div className="flex flex-row w-4/12 justify-end items-center">
@@ -53,7 +58,7 @@ const Navbar = () => {
           />
         </div>
         <div>
-          <div className="mx-2 cursor-pointer flex justify-center items-center">
+          <div className="mx-2 cursor-pointer flex justify-center items-center text-white">
             <button
               id="menu-button"
               onClick={() => {
@@ -94,11 +99,6 @@ const Navbar = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="mx-2">
-          <button className="w-28 h-10 bg-pink-500 rounded-lg text-white shadow-sm hover:shadow-sm">
-            Upload
-          </button>
         </div>
       </div>
     </div>
