@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema(
     },
     referrer: {
       type: "string",
+      default: "",
     },
     referral_code: {
       type: "string",
@@ -26,7 +27,11 @@ const userSchema = new mongoose.Schema(
     referred_users: {
       type: "array",
       default: [],
-    }
+    },
+    referrals_used: {
+      type: "array",
+      default: [],
+    },
   },
   { timestamps: true }
 );

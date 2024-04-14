@@ -32,7 +32,7 @@ export const signup = async (req, res) => {
         return res.status(400).json({ error: "Invalid referral code"});
       }
 
-      newUser.referrer = referral_code;
+      newUser.referrer = referrer._id;
       await newUser.save();
 
       referrer.referred_users.push(newUser._id);
@@ -43,7 +43,9 @@ export const signup = async (req, res) => {
         fullName: newUser.fullName,
         username: newUser.username,
         email: newUser.email,
+        referrer: newUser.referrer,
         referral_code: newUser.referral_code,
+        referred_users: newUser.referred_users,
       });
     }
     else if(newUser){
@@ -55,7 +57,9 @@ export const signup = async (req, res) => {
         fullName: newUser.fullName,
         username: newUser.username,
         email: newUser.email,
+        referrer: newUser.referrer,
         referral_code: newUser.referral_code,
+        referred_users: newUser.referred_users,
       });
     }
     else{
@@ -88,6 +92,9 @@ export const login = async (req, res) => {
         _id: user._id,
         fullName: user.fullName,
         email: user.email,
+        referrer: user.referrer,
+        referral_code: user.referral_code,
+        referred_users: user.referred_users,
       });
     }
   } catch (err) {
