@@ -10,7 +10,7 @@ export const signup = async (req, res) => {
     const user = await User.findOne({ email: email });
 
     if (user) {
-      return res.status(400).json({ error: "Email already exists" });
+      return res.status(500).json({ error: "Email already exists" });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -29,7 +29,7 @@ export const signup = async (req, res) => {
     if(referral_code && newUser){
       const referrer = await User.findOne({referral_code: referral_code});
       if(!referrer){
-        return res.status(400).json({ error: "Invalid referral code"});
+        return res.status(404).json({ error: "Invalid referral code"});
       }
 
       newUser.referrer = referrer._id;
@@ -63,7 +63,7 @@ export const signup = async (req, res) => {
       });
     }
     else{
-      return res.status(400).json("Invalid user data");
+      return res.status(400).json({error:"Invalid user data"});
     }
 
   } catch (error) {
