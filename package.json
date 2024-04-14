@@ -18,6 +18,8 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.1",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "referral-codes": "^3.0.0",
+    "short-unique-id": "^5.0.3"
   }
 }

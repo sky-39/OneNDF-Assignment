@@ -15,6 +15,17 @@ const userSchema = new mongoose.Schema(
       type: "string",
       required: true,
       minLength: 6,
+    },
+    referrer: {
+      type: "string",
+    },
+    referral_code: {
+      type: "string",
+      unique: true,
+    },
+    referred_users: {
+      type: "array",
+      default: [],
     }
   },
   { timestamps: true }
