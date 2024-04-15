@@ -46,6 +46,7 @@ export const signup = async (req, res) => {
         referrer: newUser.referrer,
         referral_code: newUser.referral_code,
         referred_users: newUser.referred_users,
+        message: "Created your account successfully",
       });
     }
     else if(newUser){
@@ -60,6 +61,7 @@ export const signup = async (req, res) => {
         referrer: newUser.referrer,
         referral_code: newUser.referral_code,
         referred_users: newUser.referred_users,
+        message: "Created you account successfully",
       });
     }
     else{
@@ -95,6 +97,7 @@ export const login = async (req, res) => {
         referrer: user.referrer,
         referral_code: user.referral_code,
         referred_users: user.referred_users,
+        message: "Logged In successfully",
       });
     }
   } catch (err) {

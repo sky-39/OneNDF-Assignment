@@ -20,6 +20,7 @@ const useLogout = () => {
         throw new Error(data.error);
       }
       localStorage.removeItem("onendf-user");
+      toast.success(data.message);
       setAuthUser(null);
     } catch (err) {
       toast.error(err.message);

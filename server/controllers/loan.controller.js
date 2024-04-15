@@ -12,7 +12,7 @@ export const applyLoanUsingReferral = async (req, res) => {
         if(!is_referral_used){
             referrer.referrals_used.push(user._id);
             await referrer.save();
-            return res.status(201).json({message: "Applied for loan"})
+            return res.status(201).json({message: "Applied for loan"});
         }
         else{
             return res.status(409).json({message:"Referral already used"});

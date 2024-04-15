@@ -34,6 +34,7 @@ const useSignup = () => {
         throw new Error(data.error);
       }
 
+      toast.success(data.message);
       localStorage.setItem("onendf-user", JSON.stringify(data));
       setAuthUser(data);
 
