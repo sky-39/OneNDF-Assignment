@@ -5,6 +5,7 @@ This app also keep tracks if the new user did the action required to redeem the 
 ------ environment variable -------
 
 - PORT
+    aefa  
 - MONGODB_URI
 - NODE_ENV
 - JWT_SECRET
